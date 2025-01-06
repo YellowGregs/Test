@@ -1,45 +1,12 @@
 {
-  "content": "",
-  "username": "",
-  "avatar_url": "",
-  "tts": false,
-  "embeds": [
-    {
-      "title": "",
-      "type": "rich",
-      "description": "",
-      "url": "",
-      "timestamp": "",
-      "color": 0,
-      "footer": {
-        "text": "",
-        "icon_url": ""
-      },
-      "image": {
-        "url": ""
-      },
-      "thumbnail": {
-        "url": ""
-      },
-      "video": {
-        "url": ""
-      },
-      "provider": {
-        "name": "",
-        "url": ""
-      },
-      "author": {
-        "name": "",
-        "url": "",
-        "icon_url": ""
-      },
-      "fields": [
-        {
-          "name": "",
-          "value": "",
-          "inline": false
-        }
-      ]
-    }
-  ]
+  "moduleName": "Nebula",
+  "rbxhttp": false,
+  "script": "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/AhmadV99/Main/refs/heads/main/Nebula/Nebula.lua\"))()",
+  "versionName": "1.0.0",
+  "Keysystem": false,
+  "ApkLink": {
+    "32": "",
+    "64": "https://example.com/nebula-64.apk"
+  },
+  "invite_discord": "https://discord.gg/HrCN6p9MDG"
 }

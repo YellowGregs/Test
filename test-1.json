@@ -1,12 +1,14 @@
 {
-  "moduleName": "Nebula",
+  "moduleName": "Cubix", // temporary
+  "FolderName": "Nebula",
   "rbxhttp": false,
   "script": "loadstring(game:HttpGet(\"https://raw.githubusercontent.com/AhmadV99/Main/refs/heads/main/Nebula/Nebula.lua\"))()",
   "versionName": "1.0.0",
-  "Keysystem": false,
+  "Keysystem": true,
+  "UseKeyGuardian": true,
   "ApkLink": {
     "32": "",
-    "64": "https://example.com/nebula-64.apk"
+    "64": "https://www.mediafire.com/file/9bb8r42lm8gfb0h/Nebula.apk/file"
   },
   "invite_discord": "https://discord.gg/HrCN6p9MDG"
 }

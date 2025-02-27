@@ -1,7 +1,6 @@
 {
-  "moduleName": "Frostware",
-  "versionName": "1.0",
-  "Keysystem": true,
+  "name": "Frostware",
+  "version": "1.0",
   "ApkLink": {
     "32": "",
     "64": ""

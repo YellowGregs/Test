@@ -6,7 +6,6 @@
 88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
---test4
 
 -- Instances: 223 | Scripts: 17 | Modules: 0 | Tags: 0
 local G2L = {};
@@ -1264,8 +1263,8 @@ G2L["79"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["79"]["Text"] = [[🔴 <font color="#B62a3d">14:09:20 -- pluh what did you do at line 1389475683774131983686134871</font>]];
 
 
--- StarterGui.NebulaUI.ConfigFrame.Frame.ConsoleF.ScrollingFrame.LocalScript
-G2L["7a"] = Instance.new("LocalScript", G2L["78"]);
+-- StarterGui.NebulaUI.ConfigFrame.Frame.ConsoleF.ScrollingFrame.TextLabel.LocalScript
+G2L["7a"] = Instance.new("LocalScript", G2L["79"]);
 
 
 
@@ -2544,30 +2543,17 @@ local script = G2L["73"];
 	end)
 end;
 task.spawn(C_73);
--- StarterGui.NebulaUI.ConfigFrame.Frame.ConsoleF.ScrollingFrame.LocalScript
+-- StarterGui.NebulaUI.ConfigFrame.Frame.ConsoleF.ScrollingFrame.TextLabel.LocalScript
 local function C_7a()
 local script = G2L["7a"];
-	local scrollingFrame = script.Parent
-	local templateLabel = scrollingFrame:WaitForChild("TextLabel")
+	local _dtc = {}
+	_dtc.console_redir = clonefunction(dtc.console_redir)
+	_dtc.onConsoleOut  = cloneref(dtc.onConsoleOut)
 	
-	templateLabel.Visible = true
-	
-	function AddMessage(message, messageType)
-		local label = templateLabel:Clone()
-		label.Visible = true
-		label.Text = string.format("[%s] %s", messageType or "Info", message)
-		label.TextColor3 = Color3.new(1, 1, 1)
-		label.BackgroundTransparency = 1
-		label.TextXAlignment = Enum.TextXAlignment.Left
-		label.TextWrapped = true
-		label.Parent = scrollingFrame
-	end
-	
-	dtc.console_redir(true)
-dtc.onConsoleOut:Connect(function(message, messagetype)
-	AddMessage(message, messagetype)
-end)
-
+	_dtc.console_redir(true)
+	_dtc.onConsoleOut:Connect(function(message, messagetype)
+		AddMessage(message, messagetype)
+	end)
 	
 end;
 task.spawn(C_7a);

@@ -6,6 +6,7 @@
 88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
+--test2
 
 -- Instances: 223 | Scripts: 17 | Modules: 0 | Tags: 0
 local G2L = {};
@@ -1246,6 +1247,7 @@ G2L["78"]["BackgroundTransparency"] = 1;
 -- StarterGui.NebulaUI.ConfigFrame.Frame.ConsoleF.ScrollingFrame.TextLabel
 G2L["79"] = Instance.new("TextLabel", G2L["78"]);
 G2L["79"]["TextWrapped"] = true;
+G2L["79"]["Active"] = true;
 G2L["79"]["BorderSizePixel"] = 0;
 G2L["79"]["TextSize"] = 14;
 G2L["79"]["TextXAlignment"] = Enum.TextXAlignment.Left;
@@ -2545,8 +2547,24 @@ task.spawn(C_73);
 -- StarterGui.NebulaUI.ConfigFrame.Frame.ConsoleF.ScrollingFrame.LocalScript
 local function C_7a()
 local script = G2L["7a"];
-	dtc.console_redir(true)
-	dtc.onConsoleOut:Connect(function(message, messagetype)
+	local scrollingFrame = script.Parent
+	local templateLabel = scrollingFrame:WaitForChild("TextLabel")
+	
+	templateLabel.Visible = false
+	
+	function AddMessage(message, messageType)
+		local label = templateLabel:Clone()
+		label.Visible = true
+		label.Text = string.format("[%s] %s", messageType or "Info", message)
+		label.TextColor3 = Color3.new(1, 1, 1)
+		label.BackgroundTransparency = 1
+		label.TextXAlignment = Enum.TextXAlignment.Left
+		label.TextWrapped = true
+		label.Parent = scrollingFrame
+	end
+	
+	_dtc_table.console_redir(true)
+	_dtc_table.onConsoleOut:Connect(function(message, messagetype)
 		AddMessage(message, messagetype)
 	end)
 	

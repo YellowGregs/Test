@@ -2546,14 +2546,12 @@ task.spawn(C_73);
 -- StarterGui.NebulaUI.ConfigFrame.Frame.ConsoleF.ScrollingFrame.LocalScript
 local function C_7a()
 local script = G2L["7a"];
-	local _dtc = {}
-	_dtc.console_redir = clonefunction(dtc.console_redir)
-	_dtc.onConsoleOut = dtc.onConsoleOut
-	
-	_dtc.console_redir(true)
-	_dtc.onConsoleOut:Connect(function(message, messagetype)
-		AddMessage(message, messagetype)
-	end)
+	local dtc = {}
+
+dtc.console_redir(true)
+dtc.onConsoleOut:Connect(function(message, messagetype)
+	AddMessage(message, messagetype)
+end)
 end;
 task.spawn(C_7a);
 -- StarterGui.NebulaUI.ConfigFrame.Frame.LocalScript

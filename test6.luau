@@ -1263,8 +1263,8 @@ G2L["79"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["79"]["Text"] = [[🔴 <font color="#B62a3d">14:09:20 -- pluh what did you do at line 1389475683774131983686134871</font>]];
 
 
--- StarterGui.NebulaUI.ConfigFrame.Frame.ConsoleF.ScrollingFrame.TextLabel.LocalScript
-G2L["7a"] = Instance.new("LocalScript", G2L["79"]);
+-- StarterGui.NebulaUI.ConfigFrame.Frame.ConsoleF.ScrollingFrame.LocalScript
+G2L["7a"] = Instance.new("LocalScript", G2L["78"]);
 
 
 
@@ -2543,7 +2543,7 @@ local script = G2L["73"];
 	end)
 end;
 task.spawn(C_73);
--- StarterGui.NebulaUI.ConfigFrame.Frame.ConsoleF.ScrollingFrame.TextLabel.LocalScript
+-- StarterGui.NebulaUI.ConfigFrame.Frame.ConsoleF.ScrollingFrame.LocalScript
 local function C_7a()
 local script = G2L["7a"];
 	local _dtc = {}

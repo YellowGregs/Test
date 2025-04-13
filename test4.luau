@@ -6,7 +6,7 @@
 88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
---test3
+--test4
 
 -- Instances: 223 | Scripts: 17 | Modules: 0 | Tags: 0
 local G2L = {};
@@ -2563,10 +2563,11 @@ local script = G2L["7a"];
 		label.Parent = scrollingFrame
 	end
 	
-	_dtc_table.console_redir(true)
-	_dtc_table.onConsoleOut:Connect(function(message, messagetype)
-		AddMessage(message, messagetype)
-	end)
+	dtc.console_redir(true)
+dtc.onConsoleOut:Connect(function(message, messagetype)
+	AddMessage(message, messagetype)
+end)
+
 	
 end;
 task.spawn(C_7a);
